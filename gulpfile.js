@@ -160,7 +160,7 @@ gulp.task('server', () => {
   const task = ['html', 'styles', 'script', 'images', 'static']
   cbTask(task).then(() => {
     browserSync.init(config.server)
-    console.log(chalk.cyan('  Server complete.\n'))
+    // console.log(chalk.cyan('  Server complete.\n'))
     gulp.start('watch')
   })
 })
