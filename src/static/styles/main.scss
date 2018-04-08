@@ -84,25 +84,15 @@ input:-webkit-autofill {
   -webkit-line-clamp: 1;
 }
 
-
-#main {
-  width: 100%;
-  margin: 50px auto;
-  text-align: center;
-
-  h1 {
-    line-height: 100px;
-    color: #d3483e;
-  }
-
-  img {
-    width: 150px;
-  }
+.left{float:left;}
+.right{float:right;}
+.clear:after{
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	overflow:hidden;
+	visibility: hidden;
 }
-
-
-
-$blue:#ccc;
-#main {
-  background: $blue;
-}
+h1,h2,h3,h4,h5,h6,strong{font-weight:normal;}
+em{font-style: normal;}
