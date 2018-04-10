@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/bundle/main.css">
     <link rel="stylesheet" href="./static/css/bundle/index.css">
-    <link rel="stylesheet" href="./statc/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/libs/bootstrap.min.css">
     <script src="./static/js/libs/jquery-3.3.1.min.js"></script>
     <script src="./static/js/plugins/bootstrap.min.js"></script>
     <title>首页</title>
@@ -25,12 +25,15 @@
       @@include('header.html', {
         "title":"indexPage"
       })
-      
+      @@include('libs.html')
       </div>
     
     <div id="text">
       <img src="/static/images/gulp.png" />
       <button class="btn">跳转至</button>
+    </div>
+    <div class="back">
+      @@include('libs.html')
     </div>
     <script src="./static/js/bundle/index.js"></script>
   </body>

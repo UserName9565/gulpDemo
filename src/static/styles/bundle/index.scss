@@ -12,5 +12,14 @@
 
   img {
     width: 150px;
+    transform: rotate(45deg)
+  }
+}
+#text{
+  text-align: center;
+  img {
+    width: 150px;
+    transform: rotate(45deg);
+    opacity: .8;
   }
 }
