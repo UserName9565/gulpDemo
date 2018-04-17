@@ -11,30 +11,31 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/static/css/bundle/main.css">
+    @@include('url-config.html')
     <link rel="stylesheet" href="./static/css/bundle/index.css">
-    <link rel="stylesheet" href="./static/css/libs/bootstrap.min.css">
-    <script src="./static/js/libs/jquery-3.3.1.min.js"></script>
-    <script src="./static/js/plugins/bootstrap.min.js"></script>
     <title>首页</title>
-  </head>
+  </head> 
   <body>
 
-    <div id="main">
-      @@include('header.html', {
-        "title":"indexPage"
-      })
-      @@include('libs.html')
+    <div class="container">
+      @@include('header.html')
       </div>
     
-    <div id="text">
-      <img src="/static/images/gulp.png" />
-      <button class="btn">跳转至</button>
+    <div class="container">
+      <div class="content">
+        <button class="btn">跳转至</button>
+      </div>
+      
     </div>
-    <div class="back">
-      @@include('libs.html')
+    <div class="container">
+      @@include('bottom.html')
     </div>
     <script src="./static/js/bundle/index.js"></script>
+    <script>
+      index.demo(3,wan)
+      function wan(){
+        
+      }
+    </script>
   </body>
 </html>

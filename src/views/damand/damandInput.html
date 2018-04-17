@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    @@include('url-config.html')
 </head>
 <body>
-    <div class="content">
-        悄悄的进村b 
+     <div class="container">
+      @@include('header.html')
+    </div>
+    <div class="container">
+
+        <div class="content">
+            <div class="col-md-2 col-md-offset-6">
+
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="content">
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3">3</div>
+            <div class="col-md-4">4</div>
+        </div>
+        
+    </div>
+     <div class="container">
+      @@include('bottom.html')
     </div>
 </body>
 </html>
