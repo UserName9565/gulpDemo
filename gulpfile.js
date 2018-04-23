@@ -107,7 +107,11 @@ gulp.task('images', () => {
     })))
     .pipe(gulp.dest(config.build.images))
 })
-
+gulp.task('layer', () => {
+  return gulp.src(config.dev.layer)
+    .pipe(plumber(onError))
+    .pipe(gulp.dest(config.build.layer))
+})
 gulp.task('eslint', () => {
   return gulp.src(config.dev.script)
    .pipe(plumber(onError))
@@ -147,6 +151,7 @@ gulp.task('watch', () => {
   gulp.watch(config.dev.script, ['script']).on('change', reload)
   gulp.watch(config.dev.images, ['images']).on('change', reload)
   gulp.watch(config.dev.static, ['static']).on('change', reload)
+  gulp.watch(config.dev.layer, ['layui']).on('change', reload)
 })
 
 gulp.task('zip', () => {
@@ -157,7 +162,7 @@ gulp.task('zip', () => {
 })
 
 gulp.task('server', () => {
-  const task = ['html', 'styles', 'script', 'images', 'static']
+  const task = ['html', 'styles', 'script', 'images', 'static','layer']
   cbTask(task).then(() => {
     browserSync.init(config.server)
     // console.log(chalk.cyan('  Server complete.\n'))
@@ -166,7 +171,7 @@ gulp.task('server', () => {
 })
 
 gulp.task('build', () => {
-  const task = ['html', 'styles', 'script', 'images', 'static']
+  const task = ['html', 'styles', 'script', 'images', 'static','layer']
   cbTask(task).then(() => {
     console.log(chalk.cyan('  Build complete.\n'))
 

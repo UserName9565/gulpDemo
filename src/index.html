@@ -1,41 +1,181 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    @@include('url-config.html')
-    <link rel="stylesheet" href="./static/css/bundle/index.css">
-    <title>首页</title>
-  </head> 
-  <body>
 
-    <div class="container">
-      @@include('header.html')
-      </div>
-    
-    <div class="container">
-      <div class="content">
-        <button class="btn">跳转至</button>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content=""> 
+  @@include('url-config.html')
+  <link rel="stylesheet" href="./static/css/bundle/index.css">
+  <title>首页</title>
+</head>
+
+<body class="layui-layout-body">
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
       
+      <!-- 头部区域（可配合layui已有的水平导航） -->
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item">
+          <a href="">最新活动</a>
+        </li>
+        <li class="layui-nav-item layui-this">
+          <a href="javascript:;">产品</a>
+          <dl class="layui-nav-child">
+            <dd>
+              <a href="">选项1</a>
+            </dd>
+            <dd>
+              <a href="">选项2</a>
+            </dd>
+            <dd>
+              <a href="">选项3</a>
+            </dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="">大数据</a>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">解决方案</a>
+          <dl class="layui-nav-child">
+            <dd>
+              <a href="">移动模块</a>
+            </dd>
+            <dd>
+              <a href="">后台模版</a>
+            </dd>
+            <dd class="layui-this">
+              <a href="">选中项</a>
+            </dd>
+            <dd>
+              <a href="">电商平台</a>
+            </dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="">社区</a>
+        </li>
+      </ul>
+      <!-- <ul class="layui-nav layui-layout-right">
+  <li class="layui-nav-item">
+    <a href="javascript:;">
+      <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+      贤心
+    </a>
+    <dl class="layui-nav-child">
+      <dd><a href="">基本资料</a></dd>
+      <dd><a href="">安全设置</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">退了</a></li>
+</ul> -->
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a href="javascript:;">
+            <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+
+          </a>
+          <dl class="layui-nav-child">
+            <dd>
+              <a href="">基本资料</a>
+            </dd>
+            <dd>
+              <a href="">安全设置</a>
+            </dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="">退了</a>
+        </li>
+
+      </ul>
     </div>
-    <div class="container">
-      @@include('bottom.html')
+
+    <div class="layui-side layui-bg-black layui-side-menu" lay-filter="test">
+     
+      <div class="layui-side-scroll">
+        <div class="layui-logo">爱知之星后台布局</div>
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree" lay-filter="test">
+          <li class="layui-nav-item layui-nav-itemed">
+            <a class="" href="javascript:;">所有商品</a>
+            <dl class="layui-nav-child">
+              <dd>
+                <a href="javascript:;" id="menu_three">列表一</a>
+                <ol class="layui-nav-child" style="display: none;">
+                  <li>
+                    <a lay-href="javascript:;">三级列表一</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">三级列表二</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">三级列表三</a>
+                  </li>
+                  <li>
+                    <a href="">超链接</a>
+                  </li>
+                </ol>
+              </dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a  href="javascript:;" >demo</a>
+            <dl class="layui-nav-child">
+              <dd>
+                <a lay-href="./views/table.html">表格</a>
+              </dd>
+              <dd>
+                <a lay-href="./views/input.html">表单</a>
+              </dd>
+              <dd>
+                  <a lay-href="./views/progress.html">进度条</a>
+                </dd>
+                <dd>
+                    <a lay-href="./views/panel.html">面板/手风琴</a>
+                  </dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a lay-href="./views/demo.html?from=demo">云市场</a>
+          </li>
+          <li class="layui-nav-item">
+            <a lay-href="./views/text.html?from=demo">发布商品</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <script src="./static/js/bundle/index.js"></script>
-    <script>
-      index.demo(3,wan)
-      function wan(){
-        
-      }
-    </script>
-  </body>
+    <!-- 页面标签 -->
+    <div class="layadmin-pagetabs">
+      <div class="layui-tab" lay-allowClose="true"  lay-filter="test">
+        <ul class="layui-tab-title">
+            <li lay-id="./views/damand/damandInput.html?from=demo" class=""><i class="layui-icon layui-icon-home"></i><i class="layui-icon layui-unselect layui-tab-close"></i></li>
+            <!-- <li>用户管理</li>
+            <li>权限分配</li> -->
+            
+        </ul>
+        <div class="layui-tab-content">
+          <div class="layui-tab-item layui-show">
+            <iframe src="./views/damand/damandInput.html?from=demo" frameborder="0" ></iframe>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      © layui.com - 底部固定区域
+    </div>
+  </div>
+  <script src="./static/js/bundle/index.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    @@include('url-config.html')
+
+</head>
+<body>
+<script type="text/html" id="sex">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="sex" value="{{d.id}}" lay-skin="switch" lay-text="女|男" lay-filter="sexDemo" {{ d.id == 10003 ? 'checked' : '' }}>
+</script>
+<div class="layui-btn-group demoTable">
+        <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
+        <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
+        <button class="layui-btn" data-type="isAll">验证是否全选</button>
+      </div>
+    <div id="barDemo" style="display:none">
+            <a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </div>
+   
+    <table id="mobile" lay-filter="mobile">
+        
+    </table>
+    <script src="/static/js/bundle/table.js"></script>
+</body>
+</html>

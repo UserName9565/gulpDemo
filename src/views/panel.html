@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @@include('url-config.html')
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">折叠面板嵌套</div>
+        <div class="layui-card-body">
+            <div class="layui-collapse" lay-accordion="">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">文豪
+                        <i class="layui-icon layui-colla-icon"></i>
+                    </h2>
+                    <div class="layui-colla-content layui-show">
+
+                        <div class="layui-collapse" lay-accordion="">
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">唐代
+                                    <i class="layui-icon layui-colla-icon"></i>
+                                </h2>
+                                <div class="layui-colla-content layui-show">
+
+                                    <div class="layui-collapse" lay-accordion="">
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">杜甫
+                                                <i class="layui-icon layui-colla-icon"></i>
+                                            </h2>
+                                            <div class="layui-colla-content layui-show">
+                                                伟大的诗人
+                                            </div>
+                                        </div>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">李白
+                                                <i class="layui-icon layui-colla-icon"></i>
+                                            </h2>
+                                            <div class="layui-colla-content">
+                                                <p>据说是韩国人</p>
+                                            </div>
+                                        </div>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">王勃
+                                                <i class="layui-icon layui-colla-icon"></i>
+                                            </h2>
+                                            <div class="layui-colla-content">
+                                                <p>千古绝唱《滕王阁序》</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">宋代
+                                    <i class="layui-icon layui-colla-icon"></i>
+                                </h2>
+                                <div class="layui-colla-content">
+                                    <p>比如苏轼、李清照</p>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">当代
+                                    <i class="layui-icon layui-colla-icon"></i>
+                                </h2>
+                                <div class="layui-colla-content">
+                                    <p>比如贤心</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">科学家
+                        <i class="layui-icon layui-colla-icon"></i>
+                    </h2>
+                    <div class="layui-colla-content">
+                        <p>伟大的科学家</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">艺术家
+                        <i class="layui-icon layui-colla-icon"></i>
+                    </h2>
+                    <div class="layui-colla-content">
+                        <p>浑身散发着艺术细胞</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/bundle/panel.js"></script>
+</html>
