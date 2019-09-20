@@ -1,0 +1,138 @@
+layui.use(['element','upload','layer','code'], function(){
+    var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+    var upload = layui.upload;
+    var layer = layui.layer;
+    var code = layui.code;
+    var face = null; back = null; license = null;
+    element.on('nav(demo)', function(elem){
+      
+    });
+    $(".upload").on("click",function(){
+        sontrast(1);
+    })
+    $(".upload2").on("click",function(){
+        sontrast(2);
+    })
+    $(".upload3").on("click",function(){
+        sontrast(3);
+    })
+    function sontrast(type){
+         var fileimg = null;
+         var base64 = null;
+         var objj = null;
+        if(type==1){
+            objj = face;
+            var urls = yunUrl+"/cxfServerX/doAllCardRecon";
+             var lType = 2;
+        }else if(type==2){
+            objj = back;
+            var urls = yunUrl+"/cxfServerX/doAllCardRecon";
+            var lType = 3;
+        }else if(type==3){
+            objj = license;
+            var urls = yunUrl+"/cxfServerX/DoBulicenseRecon";
+            
+        }
+       
+        objj.preview(function(index, file, result){
+            fileimg = file.type;
+            base64  = result;
+            
+            goImg();
+      });
+        function goImg(){
+
+            var obj = {};
+            if(type!=3){
+
+                obj.username = "test"
+             
+                obj.signdata = "NULL"
+                obj.imgtype =fileimg.replace(/image\//, "") 
+            
+                
+                obj.paramdata = common.douhao(base64, lType);
+            }else{
+                obj.username="test";
+                 obj.imgbase64=base64.split(",")[1]; 
+                 obj.cardtype="2008"; 
+                 obj.outvalue="0";//(可选择输出字段) 
+            }
+    
+             obj = JSON.stringify(obj)
+             common.ajax(urls,"post",obj,success);
+             function success(data){
+                var data = JSON.parse(data).data;
+                var str = '';
+                
+                 
+                //var str1 = ' <pre class="layui-code">'+str+'</pre>  '
+                if(type==1){
+                    var box = ".faceCode";
+                   
+                }else if(type==2){
+                    var box = ".backCode";
+                  
+                }else if(type==3){
+                    var box = ".licenseCode";
+                    
+                }
+                $(box).JSONView(data, { collapsed: false, nl2br: false, recursive_collapser: false })
+                //$(box).html(str1)
+                // layui.code({
+                //     elem:box,
+                //     encode: true //是否转义html标签。默认不开启
+                //   });
+                 
+             }
+        }
+    }
+    var uploadInst = upload.render({
+        elem: '#test1' //绑定元素
+        ,auto: false //选择文件后不自动上传
+        ,accept:"images"
+        ,drag:true
+        ,choose:function(obj){
+            
+            face = obj;
+             
+            //预读本地文件，如果是多文件，则会遍历。(不支持ie8/9)
+            obj.preview(function(index, file, result){
+                $(".image1").attr("src",result);
+               
+            });
+        }
+    });
+    var uploadInst2 = upload.render({
+        elem: '#test2' //绑定元素
+        ,auto: false //选择文件后不自动上传
+        ,accept:"images"
+        ,drag:true
+        ,choose:function(obj){
+            
+            back = obj;
+             
+            //预读本地文件，如果是多文件，则会遍历。(不支持ie8/9)
+            obj.preview(function(index, file, result){
+                $(".image2").attr("src",result);
+               
+            });
+        }
+    });
+    var uploadInst3 = upload.render({
+        elem: '#test3' //绑定元素
+        ,auto: false //选择文件后不自动上传
+        ,accept:"images"
+        ,drag:true
+        ,choose:function(obj){
+            
+            license = obj;
+             
+            //预读本地文件，如果是多文件，则会遍历。(不支持ie8/9)
+            obj.preview(function(index, file, result){
+                $(".image3").attr("src",result);
+               
+            });
+        }
+    });
+})

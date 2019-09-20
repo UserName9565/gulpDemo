@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱知演示</title>
+</head>
+@@include('url-config.html')
+<link rel="stylesheet" href="/static/css/jquery.jsonview.css">
+<body>
+    @@include('header.html',{"type":"2"})
+    <div style="padding: 20px; background-color: #F2F2F2;">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+
+                    <div class="layui-tab layui-tab-card">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">二代身份证正面</li>
+                            <li>二代身份证背面</li>
+                            <li>营业执照</li>
+                        </ul>
+                        <div class="layui-tab-content" style="min-height: 800px;">
+                            <div class="layui-tab-item clear layui-show">
+                                <div class="layui-col-md12">
+                                    <div class="layui-col-md5">
+                                        <div class="layui-col-md12 tac ">
+
+                                            <button type="button" class="layui-btn" id="test1">
+                                                <i class="layui-icon">&#xe67c;</i>选择身份证正面照片
+                                            </button>
+                                        </div>
+                                        <div class="layui-col-md12 mt20 tac">
+                                            <img class="layui-upload-img imgview image1" src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md1 tac">
+                                        <button class="layui-btn diu  upload" type="button">识别</button>
+                                    </div>
+                                    <div class="layui-col-md5">
+                                        <div class="layui-col-md12 tac">
+
+                                            <button class="layui-btn   layui-btn-primary" type="button">识别结果</button>
+                                        </div>
+                                        <div class="layui-col-md12 mt20 faceCode codeM">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-tab-item clear">
+                                <div class="layui-tab-item layui-show">
+                                    <div class="layui-col-md12">
+                                        <div class="layui-col-md5">
+                                            <div class="layui-col-md12 tac ">
+
+                                                <button type="button" class="layui-btn" id="test2">
+                                                    <i class="layui-icon">&#xe67c;</i>选择身份证背面照片
+                                                </button>
+                                            </div>
+                                            <div class="layui-col-md12 mt20 tac">
+                                                <img class="layui-upload-img imgview image2" src="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-md1 tac">
+                                            <button class="layui-btn diu  upload2" type="button">识别结果</button>
+                                        </div>
+                                        <div class="layui-col-md5">
+                                            <div class="layui-col-md12 tac">
+                                                <button class="layui-btn   layui-btn-primary" type="button">识别结果</button>
+                                            </div>
+                                            <div class="layui-col-md12 mt20 backCode">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="layui-tab-item clear">
+                                <div class="layui-tab-item layui-show">
+                                    <div class="layui-col-md12">
+                                        <div class="layui-col-md5">
+                                            <div class="layui-col-md12 tac ">
+
+                                                <button type="button" class="layui-btn" id="test3">
+                                                    <i class="layui-icon">&#xe67c;</i>营业执照
+                                                </button>
+                                            </div>
+                                            <div class="layui-col-md12 mt20 tac">
+                                                <img class="layui-upload-img imgview imageY" src="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-md1 tac">
+                                            <button class="layui-btn diu  upload3" type="button">识别</button>
+                                        </div>
+                                        <div class="layui-col-md5">
+                                            <div class="layui-col-md12 tac">
+
+                                                <button class="layui-btn   layui-btn-primary" type="button">识别结果</button>
+
+                                            </div>
+                                            <div class="layui-col-md12 mt20 licenseCode">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/jquery.jsonview.js"></script>
+    <script src="/static/js/sontrast.js"></script>
+
+</body>
+
+</html>

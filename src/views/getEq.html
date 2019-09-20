@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>爱知演示</title>
+</head>
+@@include('url-config.html')
+
+<body>
+  @@include('header.html',{"type":"4"})
+  <div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+
+          <div class="layui-tab layui-tab-card">
+            <ul class="layui-tab-title">
+              <li class="layui-this">扫码签字</li>
+            </ul>
+            <div class="layui-tab-content" style="min-height: 800px;">
+              <div class="layui-tab-item clear layui-show">
+                <div class="layui-col-md12">
+                  <div class="layui-col-md5">
+                    <div class="layui-col-md12 tac ">
+
+                      <!-- <button type="button" class="layui-btn" id="test1">
+                                                <i class="layui-icon">&#xe67c;</i>选择识别照片
+                                            </button> -->
+
+                    </div>
+                    <div class="layui-col-md12 mt20 tac layui-form">
+                      
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">订单编号</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="orderCode" lay-verify="required" placeholder="请输入" autocomplete="off"
+                            class="layui-input">
+                        </div>
+                      </div>
+                      <button class="layui-btn dpn" lay-submit="" lay-filter="demo1">立即提交</button>
+                    </div>
+                  </div>
+                  <div class="layui-col-md1 tac diu">
+                    <!-- <button class="layui-btn   upload" type="button">识别</button> -->
+                  </div>
+                  <div class="layui-col-md5">
+                    <div class="layui-col-md12 tac">
+                      <!-- <button class="layui-btn   layui-btn-primary" type="button">识别结果</button> -->
+
+                    </div>
+                    <div class="canbox QRshow tac">
+                        <img class="layui-upload-img  " src="" alt="">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-md12">
+
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/three.js"></script>
+  <script src="/static/js/getEq.js"></script>
+
+</body>
+
+</html>

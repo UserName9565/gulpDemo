@@ -1,0 +1,63 @@
+@charset "UTF-8";
+html, body, div, p, ul, li, h1, h2, h3, img {
+  margin: 0;
+  padding: 0; }
+img {
+  border: none; }
+a {
+  text-decoration: none;
+  color: #262626; }
+body {
+  font: 5.12px "苹方";
+  font: 0.32rem "苹方"; }
+ul, ol, li {
+  list-style: none; }
+.left {
+  float: left; }
+.right {
+  float: right; }
+.clear:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: normal; }
+em {
+  font-style: normal; }
+.tar {
+  text-align: right; }
+.tac {
+  text-align: center; }
+.imgview {
+  width: 500px;
+  height: 281.25px;
+  border: 1px dashed #ccc; }
+.imageY {
+  width: 400px;
+  height: 600px; }
+.layui-header {
+  background-color: #393D49; }
+.logo {
+  margin-left: 20px;
+  width: 82px;
+  height: 52px; }
+.codeM {
+  border: 1px dashed #ccc;
+  min-height: 281.25px; }
+.mt20 {
+  margin-top: 20px; }
+.diu {
+  margin-top: 154px; }
+.collapser {
+  display: none; }
+.layui-layer-btn {
+  text-align: center !important; }
+#canvas {
+  width: 500px !important;
+  height: 283.25px !important; }
+.QRshow img {
+  width: 200px;
+  height: 200px; }
